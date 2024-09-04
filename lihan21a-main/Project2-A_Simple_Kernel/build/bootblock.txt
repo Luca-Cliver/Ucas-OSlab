@@ -1,0 +1,24 @@
+
+build/bootblock:     file format elf64-littleriscv
+
+
+Disassembly of section .text:
+
+0000000050200000 <_ftext>:
+    50200000:	0ff0000f          	fence
+    50200004:	48a5                	li	a7,9
+    50200006:	00000517          	auipc	a0,0x0
+    5020000a:	02c50513          	addi	a0,a0,44 # 50200032 <__DATA_BEGIN__>
+    5020000e:	ff34f0ef          	jal	ra,50150000 <bios_func_entry>
+    50200012:	48ad                	li	a7,11
+    50200014:	50200437          	lui	s0,0x50200
+    50200018:	1fc4041b          	addiw	s0,s0,508
+    5020001c:	50201537          	lui	a0,0x50201
+    50200020:	00041583          	lh	a1,0(s0) # 50200000 <_ftext>
+    50200024:	4605                	li	a2,1
+    50200026:	fdb4f0ef          	jal	ra,50150000 <bios_func_entry>
+    5020002a:	7d70006f          	j	50201000 <kernel>
+
+000000005020002e <stop>:
+    5020002e:	a001                	j	5020002e <stop>
+    50200030:	0001                	nop

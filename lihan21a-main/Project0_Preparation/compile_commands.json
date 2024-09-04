@@ -1,0 +1,22 @@
+[
+    {
+        "arguments": [
+            "riscv64-unknown-linux-gnu-gcc",
+            "-c",
+            "-O0",
+            "-fno-builtin",
+            "-nostdlib",
+            "-nostdinc",
+            "-Wall",
+            "-mcmodel=medany",
+            "-ggdb3",
+            "-e",
+            "main",
+            "-o",
+            "lihan1",
+            "lihan1.S"
+        ],
+        "directory": "/home/stu/lihan21a/Project0_Preparation",
+        "file": "lihan1.S"
+    }
+]

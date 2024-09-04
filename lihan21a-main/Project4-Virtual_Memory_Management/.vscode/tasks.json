@@ -1,0 +1,32 @@
+{
+    "tasks": [
+      {
+        "type": "shell",
+        "label": "Rebuild kernel",
+        "command": "/usr/bin/sh",
+        "args": [
+          "${workspaceFolder}/rebuild.sh"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        }
+      },
+      {
+        "type": "cppbuild",
+        "label": "Build createimage",
+        "command": "/usr/bin/gcc",
+        "args": [
+          "-fdiagnostics-color=always",
+          "-g",
+          "${workspaceFolder}/tools/createimage.c",
+          "-o",
+          "${workspaceFolder}/build/createimage"
+        ],
+        "problemMatcher": [
+          "$gcc"
+        ]
+      }
+    ],
+    
+    "version": "2.0.0"
+  }
